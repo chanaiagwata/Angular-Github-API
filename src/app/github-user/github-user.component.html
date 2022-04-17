@@ -1,0 +1,13 @@
+
+<div class="container">
+    <h1>id:{{user.id}}</h1>
+    <h1>{{user.public_gists}}</h1>
+    <img src="user.avatar_url" alt="">
+    <p>repos:{{user.public_repos}}</p>
+</div>
+<p>github-user works!</p>
+<div class="container" *ngFor="let repo of repos">
+    <ul>
+        <li>name:{{repo.name}}</li>
+    </ul>
+</div>

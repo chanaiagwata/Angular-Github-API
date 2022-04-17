@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -7,14 +8,17 @@ import { ApiService } from '../api.service';
   styleUrls: ['./search-info.component.css']
 })
 export class SearchInfoComponent implements OnInit {
-  information: ApiService [] = []
+  users: User [] = []
 
-  constructor(private informationService:ApiService) { }
+  constructor(private userService:ApiService) { }
 
   ngOnInit(): void {
-    this.informationService.getUsers().subscribe(
-      data=> console.log(data) 
-    )
+    // this.userService.getUsers().subscribe(
+    //   resp => {
+    //     this.users = resp
+    //     // console.log(this.users)
+    //   }
+    // )
   }
 
 }
