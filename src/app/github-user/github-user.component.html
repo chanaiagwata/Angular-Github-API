@@ -1,21 +1,26 @@
-
-<div class="container">
-  <h1>{{user.login}}</h1>
-  <h1>id:{{user.id}}</h1>
-  <h1>gists:{{user.public_gists}}</h1>
-</div>
-<p>github-user works!</p>
 <form>
+  <label>Search User</label>
   <input id="searchUser" type="search" name="searchUser" placeholder="Enter Github Username" value=""
-    [(ngModel)]="username" (keyup)="searchProfile()"/>
+    [(ngModel)]="username" (keyup)="searchProfile()" />
 </form>
-<h3>Repos from search</h3>
-
 <div *ngIf="user">
-    <div ngFor="let username of users">
-        <h5>{{user.name}}</h5>
-        <h5>{{user.email}}</h5>
-        <h5>{{user.location}}</h5>
-        <h4>{{user.created_at}}</h4>
-      </div>
-</div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body text-center">
+            <a href="#" class="avatar avatar-xl rounded-circle"><img src="{{user.avatar_url}}" alt="profile photo"></a>
+        </div>
+        <div class="text-center">
+            <p><strong>{{user.username}}</strong></p>
+            <p>{{user.bio}}</p>
+            <p><strong>Repos:</strong>{{user.public_repos}}</p>
+            <p><strong>Followers:</strong>{{user.followers}}</p>
+            <p><strong>Following:</strong>{{user.following}}</p>
+            <p><strong>Location:</strong>{{user.location}}</p>
+        </div>
+        <div>
+            <a href="user.html_url"class="text-info" style="text-decoration:none;"><p>View Profile</p></a>
+        </div>
+    </div>
+</div> 
+
+
+

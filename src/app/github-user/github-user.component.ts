@@ -1,4 +1,4 @@
-import { NgStyle } from '@angular/common';
+// import { NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
@@ -10,7 +10,8 @@ import { ApiService } from '../api.service';
 export class GithubUserComponent implements OnInit {
   user: any = [];
   repos: any = [];
-  username:string =''
+  username:string ='chanaiagwata'
+
   constructor(private apiService: ApiService) {
     this.apiService.getGithubUser().subscribe(
       data => {
@@ -24,6 +25,10 @@ export class GithubUserComponent implements OnInit {
      this.apiService.getGithubUser().subscribe((user) =>{
        this.user = user;
        console.log(user)
+     })
+     this.apiService.getUserRepos().subscribe(repos=>{
+       this.repos = repos;
+       console.log(repos)
      })
    }
 
