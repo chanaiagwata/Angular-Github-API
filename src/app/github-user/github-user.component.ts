@@ -10,9 +10,17 @@ import { ApiService } from '../api.service';
 export class GithubUserComponent implements OnInit {
   user: any = []
   repos: any = [];
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {
+    this.apiService.getUserRepos().subscribe(
+      repos =>{
+        this.repos = repos;
+        console.log(this.repos)
+      }
+    ) 
+   }
 
 
+  // lifecyle hook for initializing compnent logic 
   ngOnInit(): void {
     this.apiService.getGithubUser().subscribe(
       data => {
@@ -20,12 +28,7 @@ export class GithubUserComponent implements OnInit {
         console.log(this.user)
       }
     )
-    this.apiService.getUserRepos().subscribe(
-      repos =>{
-        this.repos = repos;
-        console.log(this.repos)
-      }
-    ) 
+  
   }
  
 }
