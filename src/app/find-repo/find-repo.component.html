@@ -1,10 +1,5 @@
 <p>find-repo works!</p>
-<form action="">
-  <label for="">Search by</label>
-  <input type="text" name="search" [(ngModel)]='repoName' (keyup)="findRepo()">
-</form>
 <div *ngFor="let repo of repoData">
-    <h4>{{repo.name}}</h4>
-    <h4>{{repo.description}}</h4>
-
+  <h4>{{repo.name}}</h4>
+  <h4>{{repo.description}}</h4>
 </div>

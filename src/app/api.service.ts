@@ -13,14 +13,14 @@ export class ApiService {
   getgithubUser() {
     throw new Error('Method not implemented.');
   }
-  user:any;
-   username:string;
+  user!:any;
+   username!:string;
    repoName!: string;
    
    Github_URL:string = 'https://api.github.com/users/';
 
    constructor(private http: HttpClient) {
-this.username = 'chanaiagwata'
+// this.username = 'chanaiagwata'
 
   }
   getGithubUser():Observable<User>{
@@ -44,8 +44,8 @@ this.username = 'chanaiagwata'
   updateRepo(repo:string){
     this.repoName = repo;
   }
-  updateUser(){
-    this.username = this.username;
+  updateUser(username:string){
+    this.username = username;
   }
 
 }

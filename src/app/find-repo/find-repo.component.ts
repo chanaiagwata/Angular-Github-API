@@ -7,8 +7,9 @@ import { ApiService } from '../api.service';
   styleUrls: ['./find-repo.component.css']
 })
 export class FindRepoComponent implements OnInit {
-  repoName:string = 'moveMe'
+  repoName:string = ''
   repoData: any = []
+  // username:any
 
   
   constructor(private repoService: ApiService) { }

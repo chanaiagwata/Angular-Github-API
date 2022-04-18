@@ -1,13 +1,18 @@
 
 <div class="container">
-    <h1>{{user.login}}</h1>
-    <h1>id:{{user.id}}</h1>
-    <h1>{{user.public_gists}}</h1>
-    <img src="user.avatar_url" alt="profile photo" width="100px" height="100px">
-   </div>
+  <h1>{{user.login}}</h1>
+  <h1>id:{{user.id}}</h1>
+  <h1>gists:{{user.public_gists}}</h1>
+</div>
 <p>github-user works!</p>
-<div class="container" *ngFor="let repo of repos">
-    <ul>
-        <li>name:{{repo.name}}</li>
-    </ul>
+<form>
+  <input id="searchUser" type="search" name="searchUser" placeholder="Enter Github Username" value=""
+    [(ngModel)]="username" (keyup)="searchProfile()"/>
+</form>
+<h3>Repos from search</h3>
+<div ngFor="let username of users">
+  <h5>{{user.name}}</h5>
+  <h5>{{user.email}}</h5>
+  <h5>{{user.location}}</h5>
+  <h4>{{user.created_at}}</h4>
 </div>

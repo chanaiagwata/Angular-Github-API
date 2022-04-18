@@ -8,27 +8,32 @@ import { ApiService } from '../api.service';
   styleUrls: ['./github-user.component.css']
 })
 export class GithubUserComponent implements OnInit {
-  user: any = []
+  user: any = [];
   repos: any = [];
+  username:string =''
   constructor(private apiService: ApiService) {
-    this.apiService.getUserRepos().subscribe(
-      repos =>{
-        this.repos = repos;
-        console.log(this.repos)
-      }
-    ) 
-   }
-
-
-  // lifecyle hook for initializing compnent logic 
-  ngOnInit(): void {
     this.apiService.getGithubUser().subscribe(
       data => {
         this.user = data; 
         console.log(this.user)
       }
-    )
-  
+    ) 
+   }
+   searchProfile(){
+     this.apiService.updateUser(this.username);
+     this.apiService.getGithubUser().subscribe((user) =>{
+       this.user = user;
+       console.log(user)
+     })
+   }
+
+
+  // lifecyle hook for initializing compnent logic 
+  ngOnInit() {
+    this.searchProfile()
+    
   }
- 
+  
+
+
 }
