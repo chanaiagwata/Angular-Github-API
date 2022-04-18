@@ -16,6 +16,17 @@
             <p><strong>Following:</strong>{{user.following}}</p>
             <p><strong>Location:</strong>{{user.location}}</p>
         </div>
+        <div *ngIf="user.public_repos">
+            <div class="text-center">
+                <h3>Repositiories</h3>
+            </div>
+            <div class="card-body" *ngFor="let repo of repos">
+                <h4>{{repos.name}}</h4>
+                <p>{{repos.description}}</p>
+                <p>{{repos.created_at|dateCount}}</p>
+                <p>{{repos.language}}</p>
+            </div>
+        </div>
         <div>
             <a href="user.html_url"class="text-info" style="text-decoration:none;"><p>View Profile</p></a>
         </div>
