@@ -6,8 +6,7 @@
     <div class="card" *ngFor="let data of repoData">
       <p>Project Name:{{data.name}}</p>
       <p>Description: {{data.description}}</p>
-      <!-- add a pipe to date -->
-      <p>Created: {{data.created_at}}</p>
+      <p>Created: {{data.created_at|dateCount}}</p>
       <p>Forks: {{data.forks_count}}</p>
       <p>Language: {{data.language}}</p>
       <a href="{{data.html_url}}"><p>View Project</p></a>

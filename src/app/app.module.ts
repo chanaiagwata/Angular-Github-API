@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubUserComponent } from './github-user/github-user.component';
 import { FindRepoComponent } from './find-repo/find-repo.component';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubUserComponent,
     FindRepoComponent,
+    DateCountPipe,
   ],
   imports: [
     BrowserModule,
