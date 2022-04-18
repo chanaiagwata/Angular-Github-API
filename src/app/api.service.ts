@@ -29,20 +29,23 @@ this.username = 'chanaiagwata'
   getUserRepos():Observable<Repository[]>{
     return this.http.get <Repository []>(this.Github_URL+this.username+'/repos')
   }
-  getOtherProfiles():Observable<User[]>{
-    return this.http.get<any[]>(this.Github_URL)
-  }
-  getUserName(username: string){
-    this.username =username;
-  }
-  getInfoOtherProfiles():Observable<Repository[]>{
-    return this.http.get<Repository[]>(this.Github_URL+ 'this.username')
-  }
-  getReposOtherProfiles(){
-    return this.http.get(this.Github_URL+this.user+'/repos')
+  // getOtherProfiles():Observable<any>{
+  //   return this.http.get<any>(this.Github_URL)
+  // }
+  // getUserName(username: string){
+  //   this.username =username;
+  // }
+  // getInfoOtherProfiles():Observable<Repository[]>{
+  //   return this.http.get<Repository[]>(this.Github_URL+ 'this.username')
+  // }
+  searchRepos(){
+    return this.http.get(this.Github_URL+this.username+ '/repos')
   }
   updateRepo(repo:string){
     this.repoName = repo;
+  }
+  updateUser(){
+    this.username = this.username;
   }
 
 }
