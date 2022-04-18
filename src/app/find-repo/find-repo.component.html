@@ -1,5 +1,17 @@
-<p>find-repo works!</p>
-<div *ngFor="let repo of repoData">
-  <h4>{{repo.name}}</h4>
-  <h4>{{repo.description}}</h4>
+<div class="container">
+  <form>
+    <input type="text" name="searchRepo" [(ngModel)]="repoName" (keyup)="findRepo">
+  </form>
+  <div *ngIf="repoData">
+    <div class="card" *ngFor="let data of repoData">
+      <p>Project Name:{{data.name}}</p>
+      <p>Description: {{data.description}}</p>
+      <!-- add a pipe to date -->
+      <p>Created: {{data.created_at}}</p>
+      <p>Forks: {{data.forks_count}}</p>
+      <p>Language: {{data.language}}</p>
+      <a href="{{data.html_url}}"><p>View Project</p></a>
+    </div>
+  </div>
+
 </div>

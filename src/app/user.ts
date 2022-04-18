@@ -4,4 +4,9 @@ export class User {
     name!: string;
     username!: string;
     email!: string;
+    public_repos!:any;
+    followers!:number;
+    following!:number;
+    html_url!:string;
+
 }

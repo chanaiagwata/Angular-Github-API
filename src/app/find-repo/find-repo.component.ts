@@ -7,7 +7,7 @@ import { ApiService } from '../api.service';
   styleUrls: ['./find-repo.component.css']
 })
 export class FindRepoComponent implements OnInit {
-  repoName:string = ''
+  repoName:string = 'moveMe'
   repoData: any = []
   // username:any
 
@@ -16,7 +16,7 @@ export class FindRepoComponent implements OnInit {
   findRepo(){
     this.repoService.updateRepo(this.repoName);
     this.repoService.searchRepos().subscribe(data=>{
-      this.repoData = data;
+      this.repoData = ['data'];
       console.log(this.repoData)
      
     })
