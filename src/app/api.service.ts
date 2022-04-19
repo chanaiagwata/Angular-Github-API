@@ -15,6 +15,7 @@ export class ApiService {
    repoName!: string;
    
    Github_URL:string = 'https://api.github.com/users/'
+   apikey = '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'
   //  apikey:string= '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'
 
    constructor(private http: HttpClient) {
