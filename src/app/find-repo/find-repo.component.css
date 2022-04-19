@@ -1,0 +1,19 @@
+.card {
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px;
+    font-family: sans-serif;
+ 
+}
+.card a{
+    text-decoration: none;
+    color:white
+}
+.project{
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background:#F57958;
+    border-radius: 10px;
+    
+}
