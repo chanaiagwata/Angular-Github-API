@@ -13,6 +13,7 @@ export class FindRepoComponent implements OnInit {
 
   
   constructor(private repoService: ApiService) { }
+  
   findRepo(){
     this.repoService.updateRepo(this.repoName);
     this.repoService.searchRepos().subscribe(data=>{

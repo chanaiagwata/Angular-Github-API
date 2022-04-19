@@ -1,12 +1,16 @@
-<form>
-  <label>Search User</label>
-  <input id="searchUser" type="search" name="searchUser" placeholder="Enter Github Username" value=""
-    [(ngModel)]="username" (keyup)="searchProfile()" />
-</form>
+<div class="text-center">
+    <form>
+        <label>Search User</label>
+        <input id="searchUser" type="search" name="searchUser" placeholder="Enter Github Username" value=""
+          [(ngModel)]="username" (keyup)="searchProfile()" />
+      </form>
+</div>
+
+
 <div *ngIf="user">
     <div class="card" style="width: 18rem;">
         <div class="card-body text-center">
-            <a href="#" class="avatar avatar-xl rounded-circle"><img src="{{user.avatar_url}}" alt="profile photo"></a>
+            <a href="#" class="avatar avatar-xl rounded-circle"><img src="{{user.avatar_url}}" alt="profile photo" height="100px" width="100px"></a>
         </div>
         <div class="text-center">
             <p><strong>{{user.username}}</strong></p>
@@ -18,17 +22,17 @@
         </div>
         <div *ngIf="user.public_repos">
             <div class="text-center">
-                <h3>Repositiories</h3>
+                <h5>Repositiories</h5>
             </div>
             <div class="card-body" *ngFor="let repo of repos">
-                <h4>{{repos.name}}</h4>
+                <h6>{{repos.name}}</h6>
                 <p>{{repos.description}}</p>
                 <p>{{repos.created_at|dateCount}}</p>
                 <p>{{repos.language}}</p>
             </div>
         </div>
         <div>
-            <a href="user.html_url"class="text-info" style="text-decoration:none;"><p>View Profile</p></a>
+            <a href="{{user.html_url}}"class="text-info" style="text-decoration:none;"><p>View Profile</p></a>
         </div>
     </div>
 </div> 
