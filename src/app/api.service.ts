@@ -50,9 +50,9 @@ export class ApiService {
     console.log(profileRepo)
     return profileRepo
   }
-  // updateRepo(repo:string){
-  //   this.repoName = repo;
-  // }
+  updateRepo(repo:string){
+    this.repoName = repo;
+  }
   updateUser(username:string){
     this.username = username;
   }

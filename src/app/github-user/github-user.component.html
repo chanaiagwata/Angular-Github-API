@@ -25,10 +25,10 @@
                 <h5>Repositiories</h5>
             </div>
             <div class="card-body" *ngFor="let repo of repos">
-                <h6>{{repos.name}}</h6>
-                <p>{{repos.description}}</p>
-                <p>{{repos.created_at|dateCount}}</p>
-                <p>{{repos.language}}</p>
+                <h6>{{repo.name}}</h6>
+                <p>{{repo.description}}</p>
+                <p>{{repo.created_at|dateCount}}</p>
+                <p>{{repo.language}}</p>
             </div>
         </div>
         <div>

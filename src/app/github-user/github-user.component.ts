@@ -13,12 +13,12 @@ export class GithubUserComponent implements OnInit {
   username:string ='chanaiagwata'
 
   constructor(private apiService: ApiService) {
-    this.apiService.getGithubUser().subscribe(
-      data => {
-        this.user = data; 
-        console.log(this.user)
-      }
-    ) 
+    // this.apiService.getGithubUser().subscribe(
+    //   data => {
+    //     this.user = data; 
+    //     console.log(this.user)
+    //   }
+    // ) 
    }
    searchProfile(){
      this.apiService.updateUser(this.username);
@@ -28,7 +28,7 @@ export class GithubUserComponent implements OnInit {
      })
      this.apiService.getUserRepos().subscribe(repos=>{
        this.repos = repos;
-       console.log(repos)
+       console.log(repos) 
      })
    }
 
