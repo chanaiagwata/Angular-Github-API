@@ -4,18 +4,24 @@
 <app-find-repo></app-find-repo> -->
 
 <div class="container-fluid">
-    <div class="navbar">
-      <div>
-        <h1>GITFINDER</h1>
-      </div>
-      <div>
-        <a class="nav-item nav-link active btn btn-secondary searchUser" routerLink="github-user"><p>Search User</p></a>
-        <a class="nav-item nav-link btn btn-secondary searchRepo" routerLink="/find-repo" style="text-decoration: none;"><p> Search Repository</p></a>
-      </div>
-  
-         
-  
+    
+    <div class="navbar text-center">
+        <div class="logo">
+            <h1>GITFINDER</h1>
+        </div>
+        <div class="searchbar">
+            <p><a class="nav-item nav-link active btn btn-secondary searchUser" routerLink="github-user">Search User</a></p>
+            <p><a class="nav-item nav-link btn btn-secondary searchRepo" routerLink="/find-repo" style="text-decoration: none;"> Search Repository</a></p>
+        </div>
+            
+
+            
+        
+        
+            
+            
+       
     </div>
-  </div>
+</div>
 
 <router-outlet></router-outlet>
