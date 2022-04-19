@@ -8,10 +8,6 @@ import { ApiService } from '../api.service';
   styleUrls: ['./find-repo.component.css']
 })
 export class FindRepoComponent implements OnInit {
-  // repoName:string = 'moveMe'
-  // repoData: any = []
-  // // username:any
-  // user: any = [];
   public repos: any = [];
   username:string ='chanaiagwata'
 
@@ -22,22 +18,6 @@ export class FindRepoComponent implements OnInit {
     })
   }
   
-  // findRepo(){
-  //   this.repoService.updateRepo(this.repoName);
-  //   this.repoService.searchRepos().subscribe(data=>{
-  //     this.repoData = ['data'];
-  //     console.log(this.repoData)
-     
-  //   })
-  // }
-  // searchProfile(){
-  //   this.repoService.updateUser(this.username);
-
-  //   this.repoService.getUserRepos().subscribe(repos=>{
-  //     this.repos = repos;
-  //     console.log(repos) 
-  //   })
-  // }
   ngOnInit(){
     
   }

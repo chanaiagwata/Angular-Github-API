@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { GithubUserComponent } from './github-user/github-user.component';
 import { FindRepoComponent } from './find-repo/find-repo.component';
 import { DateCountPipe } from './date-count.pipe';
-import { NavigateComponent } from './navigate/navigate.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { NavigateComponent } from './navigate/navigate.component';
     GithubUserComponent,
     FindRepoComponent,
     DateCountPipe,
-    NavigateComponent,
+  
   ],
   imports: [
     BrowserModule,
