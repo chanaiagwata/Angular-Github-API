@@ -3,15 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
-.logo{
+/* .logo{
     color:white
-}
+} */
 .navbar{
-    display: flex;
-    background: #2D3E50;
-    height:150px;
-    align-items:center;
-    justify-content: center;
+    /* display: flex;
+    background: #2D3E50; */
+    height:100px;
+    /* align-items:center;
+    justify-content: center; */
+   
+ }
+ .brand{
+    color: #F57958;
+    margin-left:50px;
  }
  .searchUser{
     background:white;
@@ -27,7 +32,12 @@
     color: black;
  }
  .searchbar{
-    margin-left: 50px;
+     height:400px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+    /* margin-left: 50px;
     transform: translate(-50% -50%);
-    padding: 10px;
+    padding: 10px; */
  }
