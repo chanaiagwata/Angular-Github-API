@@ -35,18 +35,12 @@ export class ApiService {
   getOtherProfiles():Observable<any>{
     return this.http.get<any[]>(this.Github_URL)
   }
-  // getUserName(username: string){
-  //   this.username =username;
+
+  // getInfoOtherProfiles():Observable<any>{
+  //   return this.http.get(this.Github_URL+ this.username)
   // }
-  getInfoOtherProfiles():Observable<any>{
-    return this.http.get(this.Github_URL+ this.username)
-  }
   searchRepos(user:any){
     let profileRepo =this.http.get(this.Github_URL + user + '/repos')
-    // return this.http.get<Repository>('https://api.github.com/users/'+this.username+'/repos?acess_token='+this.apikey);
-    // return this.http.get<Repository>('https://api.github.com/search/repositories?q='+this.repoName, ({
-    //   headers: new HttpHeaders({Authorization: `token${this.apikey}`})
-    // }))
     console.log(profileRepo)
     return profileRepo
   }

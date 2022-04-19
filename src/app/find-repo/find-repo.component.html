@@ -1,16 +1,16 @@
-<!-- <div class="container">
-  <form>
-    <input type="text" name="searchRepo" [(ngModel)]="repoName" (keyup)="findRepo">
-  </form>
-  <div *ngIf="repoData">
-    <div class="card text-center" *ngFor="let data of repoData">
-      <p>Project Name:{{data.name}}</p>
-      <p>Description: {{data.description}}</p>
-      <p>Created: {{data.created_at|dateCount}}</p>
-      <p>Forks: {{data.forks_count}}</p>
-      <p>Language: {{data.language}}</p>
-      <a href="{{data.html_url}}" style="text-decoration:none;"><p class="text-info">View Project</p></a>
+<div class="container">
+  <div *ngFor="let repo of repos">
+    <div class="card">
+      <hr>
+    
+      <div class="card-body">
+       <h4>{{repo.name}}</h4> 
+       <p>{{repo.description}}</p>
+       <p><strong>Languages:</strong> {{repo.language}}</p>
+       <p><strong>Created on:</strong> {{repo.created_at|date}}</p>
+       <a href="{{repo.html_url}}"><p>View Project</p></a>
+      </div>
     </div>
-  </div>
 
-</div> -->
+  </div>
+</div>
