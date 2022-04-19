@@ -1,17 +1,17 @@
 
 
-# Github-API SEARCH
+# Angular-Github-API
 
 ## By Chanai Agwata
 ### (MS School Project)
 
-* [Overall Description](https://github.com/chanaiagwata/Quote-App/tree/master#overall-project-description)
+* [Overall Description](https://github.com/chanaiagwata/Angular-Github-API#overall-project-description)
 
-* [Setup Instructions](https://github.com/chanaiagwata/Quote-App/tree/master#setup-instructions)
+* [Setup Instructions](https://github.com/chanaiagwata/Angular-Github-API#setup-instructions)
 
-* [License](https://github.com/chanaiagwata/Quote-App/tree/master#license)
+* [License](https://github.com/chanaiagwata/Angular-Github-API#license)
 
-* [Author's Info](https://github.com/chanaiagwata/Quote-App/tree/master#authors-info)
+* [Author's Info](https://github.com/chanaiagwata/Angular-Github-API#authors-info)
 
 ## Overall Project Description
 <p>This is a website that enables users to search Github user's information by entering a username and submit it. The application fetches names and descriptions of public repositories</p>
