@@ -14,16 +14,16 @@ export class FindRepoComponent implements OnInit {
   
   constructor(private repoService: ApiService) { }
   
-  findRepo(){
-    this.repoService.updateRepo(this.repoName);
-    this.repoService.searchRepos().subscribe(data=>{
-      this.repoData = ['data'];
-      console.log(this.repoData)
+  // findRepo(){
+  //   this.repoService.updateRepo(this.repoName);
+  //   this.repoService.searchRepos().subscribe(data=>{
+  //     this.repoData = ['data'];
+  //     console.log(this.repoData)
      
-    })
-  }
+  //   })
+  // }
   ngOnInit(){
-    this.findRepo()
+    // this.findRepo()
   }
 
 }
